@@ -1,0 +1,132 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    color: #333;
+  }
+  
+  /* Container */
+  .converter-container {
+    width: 90%;
+    max-width: 450px;
+    padding: 2rem;
+    background-color: #fdfdfd;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  .converter-container:hover {
+    transform: translateY(-3px);
+  }
+  
+  /* Header */
+  h1 {
+    font-size: 2rem;
+    color: #3498db;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+  }
+  
+  /* Input Group Styling */
+  .converter {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #555555;
+    margin-bottom: 0.3rem;
+  }
+  
+  select, input {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  select:focus, input:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 6px rgba(52, 152, 219, 0.2);
+  }
+  
+  input[disabled] {
+    background-color: #f1f1f1;
+    color: #777;
+  }
+  
+  /* Convert Button */
+  button {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #3498db;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
+  
+  button:active {
+    transform: scale(0.98);
+  }
+  
+  /* Conversion Rate Text */
+  #conversion-rate {
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #2c3e50;
+  }
+  
+  /* Media Query for Responsive Design */
+  @media (max-width: 500px) {
+    .converter-container {
+      width: 95%;
+      padding: 1.5rem;
+    }
+  
+    h1 {
+      font-size: 1.7rem;
+    }
+  
+    button {
+      padding: 0.7rem;
+    }
+  }
